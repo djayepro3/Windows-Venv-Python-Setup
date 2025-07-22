@@ -1,0 +1,145 @@
+
+##############################################################################################################################################
+# Author: Dishanand Jayeprokash
+# Date Created: 17 July 2025
+# Date Modified: 22 July 2025
+##############################################################################################################################################
+
+
+** Create virtual environment on Windows: **
+Terminal
+* python -m venv venv *          
+
+python -m venv tells python to use venv module to create virtual environment, the last venv is the folder name where it will be created
+
+##############################################################################################################################################
+
+** Activate venv **
+Terminal:
+* venv\scripts\activate *
+
+Might encounter error saying scripts is disabled on the system, e.g.,
+C:\Users\jay\Desktop\vscode_test> venv\scripts\activate venv\scripts\activate : 
+C:\Users\jay\Desktop\vscode_test\venv\scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system. 
+For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170. 
+At line:1 char:1 + venv\scripts\activate + ~~~~~~~~~~~~~~~~~~~~~ + CategoryInfo : SecurityError: (:) [], 
+PSSecurityException + FullyQualifiedErrorId : UnauthorizedAccess
+
+Solution:
+Terminal:
+* Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned *
+
+##############################################################################################################################################
+
+** Select the Interpreter in VS Code **
+Make sure to download the latest Python version from python.org for the interpreter.
+
+Use command palette, ctrl + shift + p
+Type the following: Python: Select Interpreter
+Choose the interpreter that points to your venv folder (e.g., .\venv\Scripts\python.exe)
+
+##############################################################################################################################################
+
+** Install packages **
+
+* pip install torch *
+
+or it could be done by setting up a requirements.txt file
+
+Create a new file in the folder you are working on, name it: requirements.txt
+
+Write all packages name you want to install in that requirements.txt file and save it, e.g.,
+
+torch>=2.0.0
+torchvision>=0.15.0
+numpy
+matplotlib
+opencv-python
+Pillow
+tifffile
+rasterio
+scikit-image
+geopandas
+pyproj
+
+
+Background:
+- torch & torchvision: Core deep learning tools.
+- numpy, matplotlib: Data manipulation and plotting.
+- opencv-python & Pillow: Basic image loading and processing.
+- tifffile: Specialized support for .tiff images.
+- rasterio: Essential for geospatial raster formats like .jp2.
+- scikit-image: Additional image processing functions.
+- geopandas & pyproj: If you plan to work with geospatial metadata or projections.
+
+To install everything from your saved file, make sure your virtual environment is active, then run:
+
+Terminal:
+* pip install -r requirements.txt *
+
+
+To check if all the packages from the requirements.txt file have been installed:
+
+Terminal:
+* pip list *
+
+
+To avoid using 'pip list' as it is tedious to check which ones are installed or not. 
+I came up with a script file called verify_requirements.py that does the following:
+- Checks requirements from a specified requirements.txt file using package names and version specifiers.
+- Counts installed packages that match the requirements and displays a summary.
+- Detects extra installed packages not listed in requirements.txt and prints how many.
+- Logs missing packages only if any exist into missing_packages.log.
+- Logs extra installed packages only if any exist into extra_packages.log.
+- Modular structure with helper functions for parsing, logging, and analysis.
+- Supports custom requirements files via --file CLI argument.
+
+
+Run the script as:
+
+Terminal:
+* python verify_requirements.py *
+
+E.g.,
+(venv) PS C:\Users\jay\Desktop\vscode_test> python verify_requirements.py
+C:\Users\jay\Desktop\vscode_test\verify_requirements.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+🔍 Checking installed packages...
+
+✅ Installed: torch>=2.0.0
+✅ Installed: torchvision>=0.15.0
+✅ Installed: numpy
+✅ Installed: matplotlib
+✅ Installed: opencv-python
+✅ Installed: Pillow
+✅ Installed: tifffile
+✅ Installed: rasterio
+✅ Installed: scikit-image
+✅ Installed: geopandas
+✅ Installed: pyproj
+✅ Installed: tqdm
+❌ Missing: test_package                     <--- additional name was added to test
+
+📊 Installed packages found from requirements.txt: 12/13
+📦 Additional packages installed: 71
+📝 Missing packages logged to 'missing_packages.log'
+📝 Extra packages logged to 'extra_packages.log'
+
+
+##############################################################################################################################################
+
+Yaayyyy, start building your preprocessing algorithms, generative models and run.
+
+##############################################################################################################################################
+
+** Deactivate virtual environment **
+
+Terminal: 
+* deactivate *
+
+Why deactivating the virtual environment is recommended:
+- Resets terminal to system Python, so you know exactly which environment you're in next time.
+- Keeps other projects from accidentally installing packages into the wrong environment.
+- Keeps Workspace Clean: Avoids leaving behind altered environment variables and paths.
+- Supports Multi-Project Workflow: Easier to switch between different virtual environments or projects.
+- Better Troubleshooting: Fresh environment means fewer hidden variables affecting scripts or debugging sessions.
