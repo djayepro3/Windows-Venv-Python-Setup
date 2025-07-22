@@ -185,7 +185,7 @@ You now have a clean, portable Python environment ready for deep learning and ge
 ## 📘 Detailed Setup Reference
 
 📄 For a more detailed walkthrough with step-by-step commands and background info, check out:  
-[**Win_venv.txt**](setup/Win_venv.txt)
+[**Win_venv.txt**](setup/create_Venv_Windows.txt)
 
 This text file includes:
 - How to create and activate a virtual environment
