@@ -16,7 +16,7 @@
 ---
 ## 📚 Table of Contents
 
-1. [🐍 Create a Virtual Environment](#-create-a-virtual-environment)
+1. [🌐 Create a Virtual Environment](#-create-a-virtual-environment)
 2. [⚡ Activate the Environment](#-activate-the-environment)
 3. [🧭 Select Interpreter in VS Code](#-select-interpreter-in-vs-code)
 4. [📦 Install Required Packages](#-install-required-packages)
@@ -30,7 +30,7 @@
 
 ---
 
-## 🐍 Create a Virtual Environment
+## 🌐 Create a Virtual Environment
 
 Open your terminal and run:
 
