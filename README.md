@@ -99,33 +99,6 @@ This is more scalable and version-controlled.
 
 ---
 
-## 🧪 Verify Package Installation
-
-You can check installed packages with:
-
-```bash
-pip list
-```
-
-> ❌ But this is tedious for long lists. So...
-
-### ✅ Use a verification script:
-
-Run the included script:
-
-```bash
-python verify_requirements.py
-```
-
-It will:
-
-* ✅ Validate installed packages and versions
-* 📝 Log missing packages to `missing_packages.log`
-* 📦 Log extra packages to `extra_packages.log`
-* 💡 Show install summary
-
----
-
 ## 📂 Sample `requirements.txt`
 
 ```txt
@@ -154,6 +127,34 @@ tqdm
 | `scikit-image`            | Extra image processing     |
 | `geopandas`, `pyproj`     | Geospatial metadata        |
 | `tqdm`                    | Progress bars for loops    |
+
+---
+
+
+## 🧪 Verify Package Installation
+
+You can check installed packages with:
+
+```bash
+pip list
+```
+
+> ❌ But this is tedious for long lists. So...
+
+### ✅ Use a verification script:
+
+Run the included script:
+
+```bash
+python verify_requirements.py
+```
+
+It will:
+
+* ✅ Validate installed packages and versions
+* 📝 Log missing packages to `missing_packages.log`
+* 📦 Log extra packages to `extra_packages.log`
+* 💡 Show install summary
 
 ---
 
