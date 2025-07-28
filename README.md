@@ -2,7 +2,7 @@
 
 > 📌 **Author:** Dishanand Jayeprokash  
 > 🗓️ **Created:** 17 July 2025  
-> ✏️ **Last Modified:** 22 July 2025  
+> ✏️ **Last Modified:** 28 July 2025  
 > 📘 **Covers:** Virtual Environment Setup • VS Code Integration • Package Installation • Requirements Management
 
 ---
