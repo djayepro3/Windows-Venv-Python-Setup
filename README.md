@@ -101,7 +101,7 @@ This is more scalable and version-controlled.
 
 ## 📂 Sample `requirements.txt`
 
-Create a new file to the current directory and save it as requirements.txt. Copy pasete the following and save it:
+Create a new file to the current directory and save it as requirements.txt. Copy paste the following, save it, and install it as shown above:
 
 ```txt
 torch>=2.0.0
