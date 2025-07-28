@@ -150,6 +150,7 @@ Run the included script:
 ```bash
 python verify_requirements.py
 ```
+The script can be obtained from [verify_requirements.py](https://github.com/djayepro3/Windows-Venv-Python-Setup/blob/main/setup/verify_requirements.py).
 
 It will:
 
