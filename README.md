@@ -211,7 +211,11 @@ Feel free to **fork the repo**, open an **issue**, or submit a **pull request**.
 
 ## 📦 Clone This Repo
 
-```bash
-git clone https://github.com/djayepro3/Windows-Venv-Python-Setup
-cd Windows-Venv-Python-Setup
-```
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/djayepro3/Windows-Venv-Python-Setup
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd Windows-Venv-Python-Setup
+    ```
