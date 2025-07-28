@@ -20,12 +20,12 @@
 2. [⚡ Activate the Environment](#-activate-the-environment)
 3. [🧭 Select Interpreter in VS Code](#-select-interpreter-in-vs-code)
 4. [📦 Install Required Packages](#-install-required-packages)
-5. [🧪 Verify Package Installation](#-verify-package-installation)
-6. [📂 Sample `requirements.txt`](#-sample-requirementstxt)
-7. [📉 Deactivate Virtual Environment](#-deactivate-virtual-environment)
-8. [🎉 Conclusion](#-conclusion)
-9. [📘 Detailed Setup Reference](#-detailed-setup-reference)
-10. [📬 Feedback](#-feedback)
+5.  [📂 Sample `requirements.txt`](#-sample-requirementstxt)
+6. [🧪 Verify Package Installation](#-verify-package-installation)
+8. [📉 Deactivate Virtual Environment](#-deactivate-virtual-environment)
+9. [🎉 Conclusion](#-conclusion)
+10. [📘 Detailed Setup Reference](#-detailed-setup-reference)
+11. [📬 Feedback](#-feedback)
 
 
 ---
@@ -100,6 +100,8 @@ This is more scalable and version-controlled.
 ---
 
 ## 📂 Sample `requirements.txt`
+
+Create a new file to the current directory and save it as requirements.txt. Copy pasete the following and save it:
 
 ```txt
 torch>=2.0.0
