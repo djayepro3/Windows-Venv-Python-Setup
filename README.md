@@ -38,7 +38,7 @@ Open your terminal and run the command for your OS.
 ### 🐧 Linux
 
 ```bash
-python3 -m venv venv
+python3 -m venv myvenv
 ```
 
 > ℹ️ On Debian/Ubuntu-based distros, if you get an error that the `venv` module is missing, install it first:
