@@ -50,7 +50,7 @@ python3 -m venv myvenv
 ### 🪟 Windows
 
 ```bash
-python -m venv venv
+python -m venv myvenv
 ```
 
 > ℹ️ `python -m venv` uses the built-in `venv` module to set up the environment.
@@ -58,7 +58,7 @@ python -m venv venv
 ### 🍎 macOS
 
 ```bash
-python3 -m venv venv
+python3 -m venv myvenv
 ```
 
 > ℹ️ macOS ships with Python 3 via Xcode Command Line Tools, but it's recommended to install Python via [python.org](https://www.python.org/downloads/) or [Homebrew](https://brew.sh/) (`brew install python`) for the latest version.
