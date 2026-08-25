@@ -74,14 +74,14 @@ All three commands create a folder named `venv` which contains your isolated Pyt
 In PowerShell or Command Prompt:
 
 ```bash
-venv\Scripts\activate
+myvenv\Scripts\activate
 ```
 
 > 🛡️ **Execution Policy Error?**
 > If you see something like:
 
 ```
-venv\scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system.
+myvenv\scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system.
 ```
 
 🔧 Fix it by running:
@@ -93,16 +93,16 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ### 🐧 Linux
 
 ```bash
-source venv/bin/activate
+source myvenv/bin/activate
 ```
 
 ### 🍎 macOS
 
 ```bash
-source venv/bin/activate
+source myvenv/bin/activate
 ```
 
-> ✅ On Linux and macOS your prompt will change to show `(venv)`, confirming the environment is active.
+> ✅ On Linux and macOS your prompt will change to show `(myvenv)`, confirming the environment is active.
 
 **To deactivate on any OS** (Windows, Linux, or macOS), simply run:
 
@@ -118,17 +118,17 @@ deactivate
    - Windows/Linux: `Ctrl + Shift + P`
    - macOS: `Cmd + Shift + P`
 2. Type: `Python: Select Interpreter`
-3. Choose the one that points to your `venv` folder:
+3. Choose the one that points to your `myvenv` folder:
 
    | OS            | Interpreter Path              |
    | ------------- | ------------------------------ |
-   | 🪟 Windows    | `.\venv\Scripts\python.exe`    |
-   | 🐧 Linux      | `./venv/bin/python`            |
-   | 🍎 macOS      | `./venv/bin/python`            |
+   | 🪟 Windows    | `.\myvenv\Scripts\python.exe`    |
+   | 🐧 Linux      | `./myvenv/bin/python`            |
+   | 🍎 macOS      | `./myvenv/bin/python`            |
 
 ✅ This ensures VS Code uses your virtual environment.
 
-> 💡 **Tip:** If your `venv` folder doesn't appear in the interpreter list, click **"Enter interpreter path…"** in the picker and browse to the path above manually, or open VS Code from inside the project folder that already contains `venv` (`code .` on Linux/macOS).
+> 💡 **Tip:** If your `myvenv` folder doesn't appear in the interpreter list, click **"Enter interpreter path…"** in the picker and browse to the path above manually, or open VS Code from inside the project folder that already contains `myvenv` (`code .` on Linux/macOS).
 
 ---
 
