@@ -1,9 +1,9 @@
-# 🧰 Python Virtual Environment Setup on Windows (Deep Learning Ready)
+# 🧰 Python Virtual Environment Setup on Linux, Windows & macOS (Deep Learning Ready)
 
 > 📌 **Author:** Dishanand Jayeprokash  
 > 🗓️ **Created:** 17 July 2025  
-> ✏️ **Last Modified:** 28 July 2025  
-> 📘 **Covers:** Virtual Environment Setup • VS Code Integration • Package Installation • Requirements Management
+> ✏️ **Last Modified:** 25 August 2026  
+> 📘 **Covers:** Virtual Environment Setup (Linux • Windows • macOS) • VS Code Integration • Package Installation • Requirements Management
 
 ---
 
@@ -27,26 +27,51 @@
 10. [📘 Detailed Setup Reference](#-detailed-setup-reference)
 11. [📬 Feedback](#-feedback)
 
+> 🖥️ **Note:** Steps 1–3 below are split by operating system (Windows / Linux / macOS). Everything from [📦 Install Required Packages](#-install-required-packages) onward is the same across all three, since it uses `pip` and Python directly.
 
 ---
 
 ## 🌐 Create a Virtual Environment
 
-Open your terminal and run:
+Open your terminal and run the command for your OS.
+
+### 🐧 Linux
+
+```bash
+python3 -m venv venv
+```
+
+> ℹ️ On Debian/Ubuntu-based distros, if you get an error that the `venv` module is missing, install it first:
+> ```bash
+> sudo apt update
+> sudo apt install python3-venv
+> ```
+
+### 🪟 Windows
 
 ```bash
 python -m venv venv
-````
-
-This creates a folder named `venv` which contains your isolated Python environment.
+```
 
 > ℹ️ `python -m venv` uses the built-in `venv` module to set up the environment.
+
+### 🍎 macOS
+
+```bash
+python3 -m venv venv
+```
+
+> ℹ️ macOS ships with Python 3 via Xcode Command Line Tools, but it's recommended to install Python via [python.org](https://www.python.org/downloads/) or [Homebrew](https://brew.sh/) (`brew install python`) for the latest version.
+
+All three commands create a folder named `venv` which contains your isolated Python environment.
 
 ---
 
 ## ⚡ Activate the Environment
 
-In the terminal (PowerShell or Command Prompt):
+### 🪟 Windows
+
+In PowerShell or Command Prompt:
 
 ```bash
 venv\Scripts\activate
@@ -65,19 +90,45 @@ venv\scripts\Activate.ps1 cannot be loaded because running scripts is disabled o
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
 
+### 🐧 Linux
+
+```bash
+source venv/bin/activate
+```
+
+### 🍎 macOS
+
+```bash
+source venv/bin/activate
+```
+
+> ✅ On Linux and macOS your prompt will change to show `(venv)`, confirming the environment is active.
+
+**To deactivate on any OS** (Windows, Linux, or macOS), simply run:
+
+```bash
+deactivate
+```
+
 ---
 
 ## 🧭 Select Interpreter in VS Code
 
-1. Open **Command Palette**: `Ctrl + Shift + P`
+1. Open **Command Palette**:
+   - Windows/Linux: `Ctrl + Shift + P`
+   - macOS: `Cmd + Shift + P`
 2. Type: `Python: Select Interpreter`
-3. Choose the one that points to:
+3. Choose the one that points to your `venv` folder:
 
-   ```
-   .\venv\Scripts\python.exe
-   ```
+   | OS            | Interpreter Path              |
+   | ------------- | ------------------------------ |
+   | 🪟 Windows    | `.\venv\Scripts\python.exe`    |
+   | 🐧 Linux      | `./venv/bin/python`            |
+   | 🍎 macOS      | `./venv/bin/python`            |
 
 ✅ This ensures VS Code uses your virtual environment.
+
+> 💡 **Tip:** If your `venv` folder doesn't appear in the interpreter list, click **"Enter interpreter path…"** in the picker and browse to the path above manually, or open VS Code from inside the project folder that already contains `venv` (`code .` on Linux/macOS).
 
 ---
 
@@ -163,7 +214,7 @@ It will:
 
 ## 📉 Deactivate Virtual Environment
 
-When done:
+When done, the command is identical on **Windows, Linux, and macOS**:
 
 ```bash
 deactivate
@@ -180,7 +231,7 @@ deactivate
 
 ## 🎉 Conclusion
 
-You now have a clean, portable Python environment ready for deep learning and geospatial processing on Windows!
+You now have a clean, portable Python environment ready for deep learning and geospatial processing — on **Windows, Linux, or macOS**!
 
 > 💡 Use this setup to power your preprocessing pipelines, generative models, or inference tools in an isolated and reproducible way.
 
