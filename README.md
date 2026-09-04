@@ -2,7 +2,7 @@
 
 > 📌 **Author:** Dishanand Jayeprokash  
 > 🗓️ **Created:** 17 July 2025  
-> ✏️ **Last Modified:** 25 August 2026  
+> ✏️ **Last Modified:** 27 August 2026  
 > 📘 **Covers:** Virtual Environment Setup (Linux • Windows • macOS) • VS Code Integration • Package Installation • Requirements Management
 
 ---
@@ -33,7 +33,7 @@
 
 ## 🌐 Create a Virtual Environment
 
-Open your terminal and run the command for your OS.
+Open your terminal and run the command for your OS. Assume the name of the virtual environment is 'myvenv'
 
 ### 🐧 Linux
 
